@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook - log in or sign up</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .base {
+            background-color: #F0F2F5;
+        }
+
+        .main-box {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 80%;
+            margin: 0 auto;
+            height: 100vh;
+        }
+        
+        .logo-box {
+            width: 500px;
+        }
+        
+        .logo-box img {
+            width: 270px;
+            margin-bottom: 9px;
+        }
+        
+        #logo-text {
+            font-size: 28px;
+        }
+
+        .form-box {
+            margin-top: 80px;
+            width: 400px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0px 3px 10px 1px rgba(62, 62, 62, 0.198);
+        }
+
+        form, a {
+            background-color: white;
+        }
+
+        input {
+            display: block;
+            background-color: white;
+            margin: 15px auto;
+            border: 0.5px solid rgb(200, 200, 200);
+            width: 370px;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 17px;
+            font-family: 'Segoe UI';
+        }
+
+        #login-button {
+            border: none;
+            background-color: #1877F2;
+            width: 370px;
+            padding: 15px;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        a {
+            width: 370px;
+            display: block;
+            padding: 10px 0;
+            margin: 0 auto 10px auto;
+            color: #1877F2;
+            font-family: 'Segoe UI';
+            cursor: pointer;
+        }
+
+        hr {
+            border-top: 0.1px solid rgba(171, 171, 171, 0.614);
+        }
+
+        #create-new-account {
+            border: none;
+            background-color: #42B72A;
+            width: 240px;
+            margin: 20px auto;
+            color: white;
+            padding: 15px 0;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #after-form-text {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 13px;
+        }
+
+        footer {
+            background-color: white;
+            color: gray;
+            word-spacing: 3px;
+        }
+
+        footer div {
+            font-size: 12px;
+            width: 70%;
+            margin: auto;
+            padding: 10px;
+        }
+
+        #empty-space {
+            background-color: #F0F2F5;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="base">
+        <div class="main-box">
+            <div class="logo-box">
+                <img src="logo.png" alt="Facebook Logo">
+                <p id="logo-text" style="text-align: left;">Facebook помогает вам всегда<br> оставаться на связи и общаться со<br> своими знакомыми.</p>
+            </div>
+            <div>
+                <div class="form-box">
+                    <form>
+                        <input type="email" id="email" placeholder="Электронный адрес или номер телефона">
+                        <input type="password" id="password" placeholder="Пароль">
+                        <button id="login-button">Вход</button>
+                        <a>Забыли пароль?</a>
+                        <hr>
+                        <button id="create-new-account">Создать новый аккаунт</button>
+                    </form>
+                </div>
+                    <p id="after-form-text"><strong>Создать Страницу</strong> знаменитости, музыкальной группы или<br> компании.</p>
+            </div>
+        </div>
+    </div>
+    <div id="empty-space"></div>
+    <footer>
+        <div>
+            <p>Русский English(US) Türkçe Bahasa Indonesia 中文(简体) Қазақша Deutsch 한국어 Shqip Español Português(Brasil)</p><br>
+            <hr><br>
+            <p>Регистрация Вход Messenger Facebook Lite Видео Места Игры Marketplace Meta Pay Meta Store Meta Quest Imagine with Meta AI Instagram
+                Threads Благотворительные акции Услуги Центр информации о выборах Политика конфиденциальности Центр конфиденциальности Группы
+                Информация Создать рекламу Создать страницу Разработчикам Вакансии Файлы cookie Рекламные предпочтения Условия использования
+                Справка Загрузка контактов и лица, не являющиеся пользователями Настройки</p><br>
+            <p>Meta©2024</p>
+        </div>
+    </footer>
+</body>
+</html>
