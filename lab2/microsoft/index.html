@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft - домашняя страница</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header a {
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .banner {
+            color: white; 
+            width: 100%;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        button {
+            color: white;
+            background-color: #0067b8;
+            border-radius: 3px;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #085189;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .media {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 80px;
+        }
+
+        .media-box {
+            width: 20%;
+            margin: 0 10px 100px 10px;
+            cursor: pointer;
+        }
+
+        .media-box img {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .title {
+            font-weight: bold;
+            font-size: 23px;
+        }
+
+        .content {
+            font-size: 15px;
+        }
+
+        .media-box a {
+            color: #0367b3;
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <header style="display: flex; flex-direction: row; font-size: 13px;">
+        <div style="display: flex; align-items: center; padding: 10px 0 10px 0; ">
+            <img src="logo.png" style="height: 25px; margin: 10px 10px 10px 50px; cursor: pointer;">
+            <a>Microsoft 365</a><a>Office</a><a>Windows</a><a>Поддержка</a>
+        </div>
+        <div style="display: flex; align-items: center; margin-left: 470px; padding: 10px 0 10px 0;">
+            <a>Продукты Майкрософт</a>
+            <img src="search.png" style="width: 27px; cursor: pointer;">
+            <img src="login.png" style="width: 40px; margin-left: 10px; cursor: pointer;">
+        </div>
+    </header>
+    <div class="banner">
+        <img src="banner.jpeg" style="width: 100%;">
+        <div style="width: 30%; position: absolute; margin-left: 150px;">
+            <p style="font-size: 25px; font-weight: bold;">Разработано для жизни - сегодня и в будущем</p><br>
+            <p>Следующее поколение игр. Ваши цели. Друзья и семья. С Windows 11 вы станете еще ближе к тому, что успели
+                полюбить.</p><br>
+            <button>Проверьте, готов ли ваш ПК</button>
+        </div>
+    </div>
+    <div style="display: flex; justify-content: center; margin-top: 30px;">
+        <img src="navigation1.png" style="height: 20px; margin-right: 20px; cursor: pointer;">
+        <img src="navigation2.png" style="height: 20px; margin-right: 20px; cursor: pointer;">
+        <img src="navigation3.png" style="height: 17px; margin-right: 20px; margin-top: 3px;">
+        <img src="navigation4.png" style="height: 20px; margin-right: 20px; cursor: pointer;">
+    </div>
+
+    <div class="media">
+        <div class="media-box">
+            <img src="media1.webp">
+            <div>
+                <p class="title">Microsoft Edge</p><br>
+                <p class="content">Потрясающая производительность, больше конфиденциальности, продуктивности и дополнительных возможностей.</p><br>
+                <a>Скачать</a>
+            </div>
+
+        </div>
+        <div class="media-box">
+            <img src="media2.webp">
+            <div>
+                <p class="title">Microsoft OneDrive</p><br
+                <p class="content">Сохраняйте свои файлы и фотографии на OneDrive — они будут доступны с любого устройства и где угодно.</p><br>
+                <a>Подробнее</a>
+            </div>
+
+
+        </div>
+        <div class="media-box">
+            <img src="media3.webp">
+            <div>
+                <p class="title">Microsoft OneNote</p><br>
+                <p class="content">Приведите свои заметки и дела в порядок.</p><br>
+                <a>Узнать больше</a>
+            </div>
+
+
+        </div>
+        <div class="media-box">
+            <img src="media4.webp">
+            <p class="title">Outlook для iOS и Android</p><br>
+            <p class="content">Будьте на связи. Организовывайте. Успевайте больше.</p><br>
+            <a>Скачать</a>
+        </div>
+    </div>
+</body>
+</html>
