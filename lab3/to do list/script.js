@@ -1,38 +1,39 @@
-let todoList = [];
+const inputBox = document.getElementById("input-box");
+const listContainer = document.getElementById("list-container");
 
-function renderTodoList() {
-    const todoListElement = document.getElementById("todoList");
-    todoListElement.innerHTML = "";
-
-    todoList.forEach((item, index) => {
-        const listItem = document.createElement("li");
-        listItem.innerHTML = `
-            <input type="checkbox" onchange="toggleDone(${index})" ${item.done ? 'checked' : ''}>
-            <span>${item.text}</span>
-            <button onclick="deleteItem(${index})">Delete</button>
-        `;
-        todoListElement.appendChild(listItem);
-    });
+function addTask() {
+  if(inputBox.value == '') {
+    alert("You must write something!");
+  }
+  else {
+    let li = document.createElement("li");
+    li.innerHTML = inputBox.value;
+    listContainer.appendChild(li);
+    let span = document.createElement("span");
+    span.innerHTML = "\u00d7";
+    li.appendChild(span);
+  }
+  inputBox.value = "";
+  saveData();
 }
 
-function addItem() {
-    const newItemText = document.getElementById("newItem").value.trim();
-    if (newItemText !== "") {
-        const newItem = { text: newItemText, done: false };
-        todoList.push(newItem);
-        renderTodoList();
-        document.getElementById("newItem").value = "";
-    }
+listContainer.addEventListener("click", function(e) {
+  if(e.target.tagName == "LI") {
+    e.target.classList.toggle("checked");
+    saveData();
+  }
+  else if(e.target.tagName == "SPAN") {
+    e.target.parentElement.remove();
+    saveData();
+  }
+}, false)
+
+function saveData() {
+  localStorage.setItem("data", listContainer.innerHTML);
 }
 
-function toggleDone(index) {
-    todoList[index].done = !todoList[index].done;
-    renderTodoList();
+function showList() {
+  listContainer.innerHTML = localStorage.getItem("data");
 }
 
-function deleteItem(index) {
-    todoList.splice(index, 1);
-    renderTodoList();
-}
-
-window.onload = renderTodoList;
+showList();
